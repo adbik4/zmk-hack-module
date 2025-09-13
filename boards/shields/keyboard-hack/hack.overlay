@@ -1,0 +1,66 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+&i2c1 {
+    status = "okay";
+
+    mcp23017: mcp23017@20 {
+        compatible = "microchip,mcp23017";
+        reg = <0x20>;
+        gpio-cells = <2>;
+        gpio-controller;
+        ngpios = <16>;
+        status = "okay";
+        }
+}
+
+/ {
+    chosen {
+        zmk,kscan0 = &kscan0;
+        zmk,physical-layout = &physical_layout0;
+    };
+
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        row-gpios
+            = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+
+        col-gpios
+            = <&mcp23017 0 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 1 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 2 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 3 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 4 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 5 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 6 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 7 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 8 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 9 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 10 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 11 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 12 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 13 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 14 GPIO_ACTIVE_HIGH>
+            , <&mcp23017 15 GPIO_ACTIVE_HIGH>
+            ;
+            };
+
+            default_transform: keymap_transform0 {
+                compatible = "zmk,matrix-transform";
+                columns = <16>; // Length of the "col-gpios" array
+                rows = <6>; // Length of the "row-gpios" array
+                map = <
+                    RC(0,0) RC(0,1) RC(0,2)
+                    RC(1,0) RC(1,1) RC(1,2)
+                    RC(2,0) RC(2,1) RC(2,2)
+                >;
+            };
+};

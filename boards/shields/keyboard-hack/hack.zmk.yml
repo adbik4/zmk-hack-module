@@ -1,0 +1,11 @@
+file_format: "1"
+id: hack
+name: Hack
+type: shield
+url: https://github.com/adbik4/zmk-hack-module/
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+  - wireless connection
+  - wired connection
