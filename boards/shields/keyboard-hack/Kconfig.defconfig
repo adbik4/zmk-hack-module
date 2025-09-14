@@ -2,7 +2,7 @@ if SHIELD_HACK
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Adrian's BLE 820"
+    default "Ajazz AK820 BLE"
 
 endif
 
