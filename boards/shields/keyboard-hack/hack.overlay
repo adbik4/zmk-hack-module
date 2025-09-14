@@ -12,7 +12,7 @@
         ngpios = <16>;
         status = "okay";
     };
-}
+};
 
 / {
     chosen {
