@@ -2,6 +2,13 @@ if SHIELD_HACK
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "hack"
+    default "Adrian's BLE 820"
 
 endif
+
+config GPIO_MCP23XXX
+    def_bool y
+
+config GPIO_MCP23XXX_INIT_PRIORITY
+    int "Init priority"
+    default 40

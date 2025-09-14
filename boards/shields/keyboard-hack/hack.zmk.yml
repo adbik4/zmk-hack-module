@@ -1,6 +1,6 @@
 file_format: "1"
 id: hack
-name: Hack
+name: Adrian's BLE 820
 type: shield
 url: https://github.com/adbik4/zmk-hack-module/
 requires: [pro_micro]
