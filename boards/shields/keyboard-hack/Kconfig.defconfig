@@ -6,7 +6,7 @@ config ZMK_KEYBOARD_NAME
 
 endif
 
-config GPIO_MCP23XXX
+config GPIO_MCP230XX
     def_bool y
 
 config GPIO_MCP23XXX_INIT_PRIORITY
