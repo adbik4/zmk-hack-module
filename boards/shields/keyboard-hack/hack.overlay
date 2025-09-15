@@ -14,7 +14,6 @@
         #gpio-cells = <2>;
         gpio-controller;
         ngpios = <16>;
-        interrupt-gpios = < >;
         status = "okay";
     };
 };
