@@ -1,6 +1,6 @@
 file_format: "1"
 id: hack
-name: Adrian's Ajazz AK820 BLE
+name: Adrian's Wireless AK820
 type: shield
 url: https://github.com/adbik4/zmk-hack-module/
 requires: [pro_micro]
