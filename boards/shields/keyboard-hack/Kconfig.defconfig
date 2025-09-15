@@ -2,6 +2,7 @@ if SHIELD_HACK
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
+    string "Keyboard name"
     default "Ajazz AK820 BLE"
 
 endif
@@ -14,6 +15,7 @@ config GPIO_MCP23XXX_INIT_PRIORITY
     default 40
 
 config CONFIG_BT_DEVICE_NAME
+    string "BT device name"
     default "Adrian's Wireless AK820"
 
 config CONFIG_BT_DEVICE_NAME_DYNAMIC
