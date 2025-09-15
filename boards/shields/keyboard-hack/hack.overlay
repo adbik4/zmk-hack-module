@@ -1,11 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/pinctrl/nrf-pinctrl.h>
 
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
     clock-frequency = <I2C_BITRATE_FAST>;    /* 400 kHz */
     pinctrl-0 = <&i2c0_custom>;
-    pinctrl-1 = <&i2c0_sleep-custom>;
+    pinctrl-1 = <&i2c0_sleep_custom>;
 
     mcp23017: mcp23017@20 {
         compatible = "microchip,mcp230xx";
@@ -25,7 +26,7 @@
         };
     };
 
-    i2c0_sleep-custom: i2c0_sleep-custom {
+    i2c0_sleep_custom: i2c0_sleep_custom {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,
                 <NRF_PSEL(TWIM_SCL, 0, 11)>;
