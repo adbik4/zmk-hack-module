@@ -83,18 +83,18 @@
 
     i2c0_custom: i2c0_custom {
         compatible = "nordic,nrf-pinctrl";
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,  // SDA
-                    <NRF_PSEL(TWIM_SCL, 0, 11)>; // SCL
+        default: default {
+        psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,     // SDA
+                <NRF_PSEL(TWIM_SCL, 0, 11)>;    // SCL
         };
     };
 
     i2c0_sleep_custom: i2c0_sleep_custom {
         compatible = "nordic,nrf-pinctrl";
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 1, 0)>, // SDA
-                <NRF_PSEL(TWIM_SCL, 0, 11)>;    // SCL
+        sleep: sleep {
+            psels = <NRF_PSEL(TWIM_SDA, 1, 0)>,     // SDA
+                    <NRF_PSEL(TWIM_SCL, 0, 11)>;    // SCL
             low-power-enable;
-        };
+            };
     };
 };
