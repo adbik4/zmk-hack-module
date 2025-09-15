@@ -12,3 +12,9 @@ config GPIO_MCP230XX
 config GPIO_MCP23XXX_INIT_PRIORITY
     int "Init priority"
     default 40
+
+config BT_DEVICE_NAME
+    default "Adrian's Wireless AK820"
+
+config BT_DEVICE_NAME_DYNAMIC
+    def_bool n
