@@ -26,12 +26,12 @@
         wakeup-source;
 
         row-gpios
-            = <&pro_micro 5 GPIO_OUTPUT>
-            , <&pro_micro 4 GPIO_OUTPUT>
-            , <&pro_micro 3 GPIO_OUTPUT>
-            , <&pro_micro 2 GPIO_OUTPUT>
-            , <&pro_micro 0 GPIO_OUTPUT>
-            , <&pro_micro 1 GPIO_OUTPUT>
+            = <&pro_micro 5 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 3 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 2 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 0 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 1 GPIO_ACTIVE_HIGH>
             ;
 
         col-gpios
