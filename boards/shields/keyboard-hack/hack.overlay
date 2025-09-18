@@ -76,6 +76,7 @@
             , <&mcp23017 15 GPIO_ACTIVE_LOW>
             , <&pro_micro 8 GPIO_ACTIVE_LOW>
             , <&pro_micro 9 GPIO_ACTIVE_LOW>
+            ;
         };
 
         default_transform: keymap_transform0 {
