@@ -13,6 +13,7 @@
         compatible = "microchip,mcp230xx";
         reg = <0x20>;
         #gpio-cells = <2>;
+        #interrupt-cells = <2>;
         gpio-controller;
         ngpios = <16>;
         int-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
