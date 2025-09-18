@@ -1,7 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/pinctrl/nrf-pinctrl.h>
 
-&gpio0: gpio@50000000 {
+&gpio0 {
     compatible = "nordic,nrf-gpio";
     #gpio-cells = <2>;
     #interrupt-cells = <2>;
