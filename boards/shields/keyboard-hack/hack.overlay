@@ -49,34 +49,33 @@
         wakeup-source;
 
         row-gpios
-            = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 0
+            , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 1
+            , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 2
+            , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 3
+            , <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 4
+            , <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 5
             ;
 
         col-gpios
-            = <&pro_micro 9 GPIO_ACTIVE_LOW>
-            , <&pro_micro 8 GPIO_ACTIVE_LOW>
-            , <&mcp23017 15 GPIO_ACTIVE_LOW>
-            , <&mcp23017 14 GPIO_ACTIVE_LOW>
-            , <&mcp23017 13 GPIO_ACTIVE_LOW>
-            , <&mcp23017 12 GPIO_ACTIVE_LOW>
-            , <&mcp23017 11 GPIO_ACTIVE_LOW>
-            , <&mcp23017 10 GPIO_ACTIVE_LOW>
-            , <&mcp23017 9 GPIO_ACTIVE_LOW>
-            , <&mcp23017 8 GPIO_ACTIVE_LOW>
-            , <&mcp23017 7 GPIO_ACTIVE_LOW>
-            , <&mcp23017 6 GPIO_ACTIVE_LOW>
-            , <&mcp23017 5 GPIO_ACTIVE_LOW>
-            , <&mcp23017 4 GPIO_ACTIVE_LOW>
-            , <&mcp23017 3 GPIO_ACTIVE_LOW>
-            , <&mcp23017 2 GPIO_ACTIVE_LOW>
+            = <&mcp23017 0 GPIO_ACTIVE_LOW>
             , <&mcp23017 1 GPIO_ACTIVE_LOW>
-            , <&mcp23017 0 GPIO_ACTIVE_LOW>
-            ;
+            , <&mcp23017 2 GPIO_ACTIVE_LOW>
+            , <&mcp23017 3 GPIO_ACTIVE_LOW>
+            , <&mcp23017 4 GPIO_ACTIVE_LOW>
+            , <&mcp23017 5 GPIO_ACTIVE_LOW>
+            , <&mcp23017 6 GPIO_ACTIVE_LOW>
+            , <&mcp23017 7 GPIO_ACTIVE_LOW>
+            , <&mcp23017 8 GPIO_ACTIVE_LOW>
+            , <&mcp23017 9 GPIO_ACTIVE_LOW>
+            , <&mcp23017 10 GPIO_ACTIVE_LOW>
+            , <&mcp23017 11 GPIO_ACTIVE_LOW>
+            , <&mcp23017 12 GPIO_ACTIVE_LOW>
+            , <&mcp23017 13 GPIO_ACTIVE_LOW>
+            , <&mcp23017 14 GPIO_ACTIVE_LOW>
+            , <&mcp23017 15 GPIO_ACTIVE_LOW>
+            , <&pro_micro 8 GPIO_ACTIVE_LOW>
+            , <&pro_micro 9 GPIO_ACTIVE_LOW>
         };
 
         default_transform: keymap_transform0 {
