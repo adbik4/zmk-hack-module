@@ -1,14 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/pinctrl/nrf-pinctrl.h>
 
-&gpio0 {
-    status = "okay";
-    compatible = "nordic,nrf-gpio";
-    #gpio-cells = <2>;
-    #interrupt-cells = <2>;
-    interrupt-controller;
-};
-
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
@@ -24,8 +16,6 @@
         gpio-controller;
         ngpios = <16>;
         int-gpios = <&gpio0 10 17>;       /* (GPIO_ACTIVE_LOW | GPIO_PULL_UP) */
-        interrupt-parent = <&gpio0>;
-        interrupts = <10 54525952>;     /* 10, GPIO_INT_EDGE_FALLING */
     };
 };
 
