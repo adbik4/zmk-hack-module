@@ -4,7 +4,7 @@
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
-    clock-frequency = <I2C_BITRATE_STANDARD>;    /* 400 kHz */
+    clock-frequency = <I2C_BITRATE_STANDARD>;    /* 100 kHz */
     pinctrl-0 = <&i2c0_custom>;
     pinctrl-1 = <&i2c0_sleep_custom>;
 
@@ -48,33 +48,33 @@
         wakeup-source;
 
         row-gpios
-            = <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&pro_micro 5 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 3 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 2 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 0 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 1 GPIO_ACTIVE_HIGH>
             ;
 
         col-gpios
-            = <&mcp23017 0 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 1 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 2 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 3 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 4 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 5 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 6 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 7 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 8 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 9 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 10 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 11 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 12 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 13 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 14 GPIO_ACTIVE_HIGH>
-            , <&mcp23017 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 8 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+            = <&mcp23017 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&mcp23017 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
         };
 
