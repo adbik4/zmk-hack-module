@@ -9,13 +9,15 @@
     pinctrl-1 = <&i2c0_sleep_custom>;
 
     mcp23017: mcp23017@20 {
+        status = "okay";
         compatible = "microchip,mcp230xx";
         reg = <0x20>;
         #gpio-cells = <2>;
         gpio-controller;
         ngpios = <16>;
-        // int-gpios = (phandle array);
-        status = "okay";
+        int-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        interrupt-parent = <&gpio0>;
+        interrupts = <10 IRQ_TYPE_EDGE_FALLING>;
     };
 };
 
@@ -45,16 +47,15 @@
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
-        poll-period-ms = <10>;
         wakeup-source;
 
-        row-gpios
-            = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        row-gpios 154320
+            = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
 
         col-gpios
