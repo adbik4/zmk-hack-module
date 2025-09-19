@@ -119,4 +119,9 @@
             kscan = <&kscan0>;
             transform = <&default_transform>;
         };
+
+        soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+        };
 };
