@@ -45,9 +45,9 @@
 
     encoder: encoder {
         compatible = "alps,ec11";
-        a-gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
-        b-gpios = <&pro_micro 18 GPIO_ACTIVE_HIGH>;
-        steps = <60>;
+        a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <120>;
         status = "okay";                                                                                                                                                                                                                                                  
     };
 
