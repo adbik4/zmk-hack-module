@@ -34,7 +34,12 @@
                 &kp LCTRL &kp LWIN &kp LALT               &kp SPACE                 &kp  RALT  &mo  1  &kp  RCTRL  &kp LEFT  &kp DOWN  &kp RIGHT
                 &encoder_td
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings {
+                compatible = "zmk,keymap-sensor";
+                bindings = <
+                    &inc_dec_kp VOL_UP VOL_DOWN
+                >;
+            };
         };
 
         fn_layer {
@@ -47,7 +52,6 @@
                 &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                 &trans   &trans   &trans                 &bootloader                   &trans    &trans    &trans    &trans   &trans    &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
