@@ -15,7 +15,7 @@
         #gpio-cells = <2>;
         gpio-controller;
         ngpios = <16>;
-        int-gpios = <&gpio0 10 17>;       /* (GPIO_ACTIVE_LOW | GPIO_PULL_UP) */
+        int-gpios = <&gpio0 10 17 &gpio0 18 17 &gpio0 19 17>;       /* (GPIO_ACTIVE_LOW | GPIO_PULL_UP) */
     };
 };
 
@@ -45,8 +45,8 @@
 
     encoder: encoder {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 19 17>;
-        b-gpios = <&gpio0 18 17>;
+        a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         steps = <60>;
         status = "okay";                                                                                                                                                                                                                                                  
     };
