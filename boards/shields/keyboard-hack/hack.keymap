@@ -36,9 +36,7 @@
             >;
             sensor-bindings {
                 compatible = "zmk,keymap-sensor";
-                bindings = <
-                    &inc_dec_kp VOL_UP VOL_DOWN
-                >;
+                bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             };
         };
 
