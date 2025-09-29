@@ -48,14 +48,14 @@
         a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-        steps = <60>;
+        steps = <30>;
         status = "okay";                                                                                                                                                                                                                                                  
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder>;
-        triggers-per-rotation = <30>;
+        triggers-per-rotation = <15>;
     };
 
     kscan0: kscan0 {
