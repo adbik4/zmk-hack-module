@@ -47,6 +47,9 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        zephyr,irq-gpios = <&gpio0 10 GPIO_INT_EDGE_BOTH>,
+                           <&gpio0 11 GPIO_INT_EDGE_BOTH>;
+
         steps = <60>;
         status = "okay";                                                                                                                                                                                                                                                  
     };
