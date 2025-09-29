@@ -48,7 +48,7 @@
         a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
-        steps = <6>;
+        steps = <360>;
         status = "okay";                                                                                                                                                                                                                                                  
     };
 
