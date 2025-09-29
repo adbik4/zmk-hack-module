@@ -23,10 +23,9 @@
     keymap0: keymap {
         compatible = "zmk,keymap";
 
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-
-        default_layer {
+            default_layer {
             display-name = "Default Layer";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
                 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
                 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp   N8  &kp  N9 &kp  N0  &kp MINUS &kp EQUAL &kp BSPC &kp HOME
@@ -40,6 +39,7 @@
 
         fn_layer {
             display-name = "Fn Layer";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             bindings = <
                 &soft_off  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans  
                 &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &trans   &trans   &trans   &trans   &trans   &trans   &bt BT_CLR  &trans  
@@ -47,7 +47,7 @@
                 &trans   &trans   &trans   &trans   &kp KP_DOT  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                 &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                 &trans   &trans   &trans                 &bootloader                   &trans    &trans    &trans    &trans   &trans    &trans
-                &encoder_td
+                &trans
             >;
         };
     };
