@@ -15,7 +15,7 @@
         #gpio-cells = <2>;
         gpio-controller;
         ngpios = <16>;
-        int-gpios = <&gpio0 10 17 &gpio0 18 17 &gpio0 19 17>;       /* (GPIO_ACTIVE_LOW | GPIO_PULL_UP) */
+        int-gpios = <&gpio0 10 17>;       /* (GPIO_ACTIVE_LOW | GPIO_PULL_UP) */
     };
 };
 
