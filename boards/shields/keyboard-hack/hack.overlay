@@ -56,8 +56,8 @@
 
         left_encoder: encoder_left {
             compatible = "alps,ec11";
-            a-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            b-gpios = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
             steps = <30>;
             status = "okay";                                                                                                                                                                                                                                                  
@@ -119,10 +119,5 @@
             display-name = "Default Layout";
             kscan = <&kscan0>;
             transform = <&default_transform>;
-        };
-
-        soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
         };
 };
