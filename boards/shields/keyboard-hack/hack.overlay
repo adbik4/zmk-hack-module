@@ -43,15 +43,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-
-        steps = <30>;
-        status = "okay";                                                                                                                                                                                                                                                  
-    };
-
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder>;
@@ -63,6 +54,15 @@
         diode-direction = "col2row";
         wakeup-source;
 
+        left_encoder: encoder_left {
+            compatible = "alps,ec11";
+            a-gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+            b-gpios = <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+            steps = <2>;
+            status = "okay";                                                                                                                                                                                                                                                  
+        };
+        
         row-gpios
             = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
