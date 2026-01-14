@@ -43,12 +43,6 @@
         zmk,physical-layout = &physical_layout0;
     };
 
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <30>;
-    };
-
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";

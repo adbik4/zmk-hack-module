@@ -7,4 +7,4 @@ config GPIO_MCP23XXX_INIT_PRIORITY
 
 config CONFIG_BT_DEVICE_NAME
     string "BT device name"
-    default "Adrian's Wireless AK820"
+    default "Adrian's AK820"
